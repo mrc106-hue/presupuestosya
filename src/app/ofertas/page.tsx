@@ -60,7 +60,7 @@ const mockOfertas = [
   },
 ];
 
-function StarRating({ rating }: { rating: number }) {
+function StarRating({ rating, reviewCount }: { rating: number; reviewCount: number }) {
   return (
     <div className="flex items-center gap-1">
       {[1, 2, 3, 4, 5].map((star) => (
@@ -76,7 +76,7 @@ function StarRating({ rating }: { rating: number }) {
         />
       ))}
       <span className="text-sm text-[#F5F5F0]/60 ml-1">
-        {rating} ({reviews} opiniones)
+        {rating} ({reviewCount} opiniones)
       </span>
     </div>
   );
@@ -155,7 +155,7 @@ export default function OfertasPage() {
                       </span>
                     </div>
 
-                    <StarRating rating={oferta.rating} />
+                    <StarRating rating={oferta.rating} reviewCount={oferta.reviews} />
 
                     <p className="text-[#F5F5F0]/60 text-sm mt-3 mb-4">
                       {oferta.descripcion}
@@ -219,8 +219,4 @@ export default function OfertasPage() {
       `}</style>
     </div>
   );
-}
-
-function reviews({ rating }: { rating: number }) {
-  return 0;
 }
