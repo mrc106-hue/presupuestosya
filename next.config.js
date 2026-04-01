@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-};
-
-module.exports = nextConfig;
+  images: {
+    domains: ['cdn.leonardo.ai', 'supabase.co', 'storage.googleapis.com'],
+  },
+}
+module.exports = nextConfig
