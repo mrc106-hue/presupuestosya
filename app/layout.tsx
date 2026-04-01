@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import LayoutShell from '@/components/LayoutShell'
 
 export const metadata: Metadata = {
   title: 'PresupuestosYa | Pide Presupuesto Gratis a Profesionales en España',
@@ -36,11 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <Navbar />
-        <main style={{ minHeight: '100vh' }}>
-          {children}
-        </main>
-        <Footer />
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   )

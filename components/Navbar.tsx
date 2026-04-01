@@ -87,6 +87,15 @@ export default function Navbar() {
         >
           Soy cliente
         </Link>
+        <Link href="/login" style={{
+          padding: '8px 18px', borderRadius: 10, fontSize: 14, fontWeight: 600,
+          color: '#666', textDecoration: 'none', transition: 'all 0.2s',
+        }}
+          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#F0F0EB' }}
+          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#666' }}
+        >
+          Acceder
+        </Link>
         <Link href="/registro-pro" style={{
           padding: '8px 18px', borderRadius: 10, fontSize: 14, fontWeight: 700,
           background: 'linear-gradient(135deg, #0066FF, #004FCC)',
